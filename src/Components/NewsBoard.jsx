@@ -19,17 +19,22 @@ export default function NewsBoard({category}) {
 
     },[category])
   return (
-    <div>
-        <h2 className='text-center'>Latest <span className='badge bg-danger'>News</span></h2>
+  <div>
+    <h2 className='text-center mt-3'>Latest <span className='badge bg-danger'>News</span></h2>
+    <div className="container">
+      <div className="row">
         {articles.map((item, index) => (
-          <NewsItem 
-            key = {index}
-            title = {item.title}
-            description = {item.description}
-            url = {item.url}
-            urlToImage = {item.urlToImage}
-          />          
+          <div className="col-md-3" key={index}>
+            <NewsItem 
+              title={item.title}
+              description={item.description}
+              url={item.url}
+              urlToImage={item.urlToImage}
+            />
+          </div>
         ))}
+      </div>
     </div>
-  )
+  </div>
+)
 }

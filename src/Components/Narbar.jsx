@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../assets/css/Navbar.css'
 export default function Narbar({setCategory}) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -10,6 +10,9 @@ export default function Narbar({setCategory}) {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
+              <li className="nav-item">
+                  <div className="nav-link" onClick={()=>setCategory("general")}>Home</div>
+                </li>
                 <li className="nav-item">
                   <div className="nav-link" onClick={()=>setCategory("technology")}>Technology</div>
                 </li>
